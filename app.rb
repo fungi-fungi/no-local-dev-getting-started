@@ -19,7 +19,7 @@ end
 #  erb :index
 #end
 
-get "/create" do
+get "/contacts" do
   @contacts = Contact.all
   erb :index
 end
