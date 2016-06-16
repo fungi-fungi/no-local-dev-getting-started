@@ -11,7 +11,7 @@ end
 
 
 class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+  self.table_name = 'salesforce.I_M__Item__c'
 end
 
 #get "/contacts" do
@@ -20,8 +20,6 @@ end
 #end
 
 get "/create" do
-  dashboard_url = 'https://dashboard.heroku.com/'
-  match = /(.*?)\.herokuapp\.com/.match(request.host)
-  dashboard_url << "apps/#{match[1]}/resources" if match && match[1]
-  redirect to(dashboard_url)
+  @contacts = Contact.all
+  erb :index
 end
