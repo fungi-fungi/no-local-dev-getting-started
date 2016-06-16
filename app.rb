@@ -11,7 +11,7 @@ end
 
 
 class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.I_M__Item__c'
+  self.table_name = 'salesforce.i_m__item__c'
 end
 
 #get "/contacts" do
